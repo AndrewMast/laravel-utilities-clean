@@ -1,6 +1,6 @@
 {
     "name": "andrewmast/laravel-utilities-clean",
-    "description": "Provides a few artisan commands for cleaning php (or stub) files",
+    "description": "Provides a few Laravel artisan commands for cleaning php (or stub) files",
     "type": "package",
     "require": {
         "php": "^7.4.0",
