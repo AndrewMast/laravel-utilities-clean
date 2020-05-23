@@ -14,5 +14,17 @@
             "email": "andrew@andrewmast.com"
         }
     ],
-    "minimum-stability": "dev"
+    "autoload": {
+        "psr-4": {
+            "AndrewMast\\Laravel\\Utilities\\Clean\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AndrewMast\\Laravel\\Utilities\\Clean\\UtilitiesCleanServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
 }
