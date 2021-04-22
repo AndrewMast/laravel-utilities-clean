@@ -31,7 +31,9 @@ class UtilitiesCleanUses extends UtilitiesClean {
      * @return string
      */
     protected function clean(string $content) {
-        return preg_replace_callback('/(?:\r?\nuse [^;]+;)+/', fn($matches) => $this->sortUses($matches[0]), $content);
+        return preg_replace_callback('/(?:\r?\nuse [^;]+;)+/', function($matches) {
+            return $this->sortUses($matches[0]);
+        }, $content);
     }
 
     /**
@@ -55,7 +57,7 @@ class UtilitiesCleanUses extends UtilitiesClean {
 
                 return $a <=> $b;
             })
-            ->map(fn($s) => sprintf("\nuse %s;", $s))
+            ->map(function($s) { return sprintf("\nuse %s;", $s); })
             ->implode('');
     }
 }
